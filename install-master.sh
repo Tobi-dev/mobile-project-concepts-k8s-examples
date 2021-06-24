@@ -27,9 +27,10 @@ echo "running additional steps"
 
 sudo mkdir -p $HOME/.kube
 sleep 1
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
-sudo chown -R $USER:$USER $HOME/.kube/config 
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
