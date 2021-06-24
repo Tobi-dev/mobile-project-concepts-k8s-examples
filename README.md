@@ -14,7 +14,7 @@ after that you need to change the permission to this file to be executable
 chmod u+x /path/to/install-master.sh
 `````
 next run the script by 
-`````
+````
 cd /path/to/install-master.sh && sudo ./install-master.sh
 ````
 note the kubeadm join command in the output somewhere
