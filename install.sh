@@ -9,7 +9,7 @@ echo "Update and Upgrade"
 sudo apt-get update && sudo apt-get upgrade -y
 
 echo "Install Docker"
-sudo apt-get install docker.io -y
+sudo apt-get install docker.io
 
 echo "Install kubeadm, kubelet and kubectl"
 sudo sh -c "echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' >> /etc/apt/sources.list.d/kubernetes.list"
