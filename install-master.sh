@@ -20,12 +20,12 @@ sudo sh -c "echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' >> /etc/
 sudo sh -c "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -"
 sudo apt-get update
 
-sudo apt-get install kubeadm=1.18.1-00 kubelet=1.18.1-00 kubectl=1.18.1-00 -y
+sudo apt-get install kubeadm kubelet kubectl -y
 
 sudo apt-mark hold kubelet kubeadm kubectl
 
 echo "Install Calico for networking"
-sudo kubeadm init --kubernetes-version 1.18.1 --pod-network-cidr 192.168.0.0/16
+sudo kubeadm init --pod-network-cidr 192.168.0.0/16
 
 echo "running additional steps"
 
