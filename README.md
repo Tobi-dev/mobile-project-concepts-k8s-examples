@@ -31,8 +31,7 @@ and you see you successfully added your node to the master server.
 for now, we only work on the master server.
 So for a service with high avaivability we need to create a service with a replica set. But the containers should also be on different nodes in case one node is offline.
 
-for a simple example we will create a nginx webserver, expose it to port 8080, setup a replicaset of 2 and also configure a pod anti afinity.
-
+for a simple example we will create a nginx webserver, expose it to port 30007 and setup a replicaset of 2
 ````
 kubectl apply -f nginx-deployment.yml
 ````
